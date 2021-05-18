@@ -55,11 +55,20 @@ open class Main(var registration:String,var totalWeight:Int,var capacity:Int,var
 }
 class Track ( registration:String, totalWeight:Int, capacity:Int){
 }
-class Trailer(var registration:String,var totalWeight:Int,var capacity:Int,var wheels:Int){
-    override fun weightCheck(){
+class Trailer( registration:String, totalWeight:Int, capacity:Int,wheels:Int):Main(registration,totalWeight,capacity,wheels) {
+    override fun weightCheck() {
+        super.weightCheck()
+        if (totalWeight > capacity) {
+            println("it is overloaded by ${totalWeight - capacity}")
+        } else {
+            println("Int is underloaded by ${totalWeight - capacity}")
+        }
 
-       var output= totalWeight/wheels
-println(output)
+
     }
 
+    var output = totalWeight / wheels
+    println(output)
 }
+
+
