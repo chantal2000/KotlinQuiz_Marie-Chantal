@@ -65,10 +65,9 @@ class Trailer( registration:String, totalWeight:Int, capacity:Int,wheels:Int):Ma
         }
 
 
-    }
-
     var output = totalWeight / wheels
     println(output)
+    }
 }
 
 
